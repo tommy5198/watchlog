@@ -1,1 +1,28 @@
 watchlog
+===
+
+set crontab(exec each day):
+ - ./config.sh init
+crontab should add following lines :
+     0 0 * * * /your_dir/watchlog.sh
+     0 0 * * * /your_dir/backup.sh
+check it via 'crontab -l'
+
+remove crontab:
+ - ./config.sh remove
+
+exec all log:
+ - ./watchdog.sh
+
+exec individualy:
+ - ./script/*.sh
+
+log save in dir by exec date
+ex: 20141113/*.log
+
+backup usage:
+ - ./backup.sh
+
+backup save by exec date
+ex: 20141113.tar.gz
+
